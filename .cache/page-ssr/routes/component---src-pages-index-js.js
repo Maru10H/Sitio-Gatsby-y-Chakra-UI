@@ -19,7 +19,7 @@ var index_js_ = __webpack_require__(2107);
 // EXTERNAL MODULE: ./node_modules/@chakra-ui/system/dist/chunk-QEVFQ4EU.mjs
 var chunk_QEVFQ4EU = __webpack_require__(5059);
 // EXTERNAL MODULE: ./node_modules/@chakra-ui/system/dist/chunk-3LE6AY5Q.mjs + 6 modules
-var chunk_3LE6AY5Q = __webpack_require__(1781);
+var chunk_3LE6AY5Q = __webpack_require__(7785);
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
 ;// CONCATENATED MODULE: ./node_modules/@chakra-ui/layout/dist/chunk-MPFPK3CX.mjs
