@@ -7426,7 +7426,7 @@ function getForwards(collectedScripts) {
 /***/ 5418:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-exports.components={"component---src-pages-404-js":()=>__webpack_require__.e(/* import() | component---src-pages-404-js */ 883).then(__webpack_require__.bind(__webpack_require__, 429)),"component---src-pages-index-js":()=>__webpack_require__.e(/* import() | component---src-pages-index-js */ 678).then(__webpack_require__.bind(__webpack_require__, 8826))};
+exports.components={"component---src-pages-404-js":()=>__webpack_require__.e(/* import() | component---src-pages-404-js */ 883).then(__webpack_require__.bind(__webpack_require__, 429)),"component---src-pages-index-js":()=>__webpack_require__.e(/* import() | component---src-pages-index-js */ 678).then(__webpack_require__.bind(__webpack_require__, 5501))};
 
 /***/ }),
 
@@ -7439,7 +7439,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "apiRunner": () => (/* binding */ apiRunner),
 /* harmony export */   "apiRunnerAsync": () => (/* binding */ apiRunnerAsync)
 /* harmony export */ });
-var plugins=[{name:'@chakra-ui/gatsby-plugin',plugin:__webpack_require__(8569),options:{"plugins":[],"resetCSS":true,"isUsingColorMode":true,"isBaseProvider":false}},{name:'partytown',plugin:__webpack_require__(5292),options:{"plugins":[]}}];/* global plugins */ // During bootstrap, we write requires at top of this file which looks like:
+var plugins=[{name:'@chakra-ui/gatsby-plugin',plugin:__webpack_require__(4255),options:{"plugins":[],"resetCSS":true,"isUsingColorMode":true,"isBaseProvider":false}},{name:'partytown',plugin:__webpack_require__(5292),options:{"plugins":[]}}];/* global plugins */ // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
 //   {
 //     plugin: require("/path/to/plugin1/gatsby-ssr.js"),
@@ -8193,7 +8193,7 @@ contents.push(children);contents.push(/*#__PURE__*/react__WEBPACK_IMPORTED_MODUL
 
 /***/ }),
 
-/***/ 8569:
+/***/ 4255:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -8775,12 +8775,8 @@ var cookieStorageManagerSSR = (cookie) => createCookieStorageManager(STORAGE_KEY
 
 
 
-;// CONCATENATED MODULE: ./node_modules/@chakra-ui/react-use-safe-layout-effect/dist/index.mjs
-// src/index.ts
-
-var dist_useSafeLayoutEffect = Boolean(globalThis == null ? void 0 : globalThis.document) ? index_js_.useLayoutEffect : index_js_.useEffect;
-
-
+// EXTERNAL MODULE: ./node_modules/@chakra-ui/react-use-safe-layout-effect/dist/index.mjs
+var react_use_safe_layout_effect_dist = __webpack_require__(6245);
 ;// CONCATENATED MODULE: ./node_modules/@chakra-ui/color-mode/dist/chunk-4DEUOPYU.mjs
 
 
@@ -8828,7 +8824,7 @@ function ColorModeProvider(props) {
     },
     [colorModeManager, getSystemTheme, setClassName, setDataset]
   );
-  dist_useSafeLayoutEffect(() => {
+  (0,react_use_safe_layout_effect_dist/* useSafeLayoutEffect */.G)(() => {
     if (initialColorMode === "system") {
       setResolvedColorMode(getSystemTheme());
     }
@@ -13649,27 +13645,14 @@ function getToastListStyle(position) {
 
 
 
-;// CONCATENATED MODULE: ./node_modules/@chakra-ui/react-use-callback-ref/dist/index.mjs
-// src/index.ts
-
-function useCallbackRef(callback, deps = []) {
-  const callbackRef = (0,index_js_.useRef)(callback);
-  (0,index_js_.useEffect)(() => {
-    callbackRef.current = callback;
-  });
-  return (0,index_js_.useCallback)((...args) => {
-    var _a;
-    return (_a = callbackRef.current) == null ? void 0 : _a.call(callbackRef, ...args);
-  }, deps);
-}
-
-
+// EXTERNAL MODULE: ./node_modules/@chakra-ui/react-use-callback-ref/dist/index.mjs
+var react_use_callback_ref_dist = __webpack_require__(5155);
 ;// CONCATENATED MODULE: ./node_modules/@chakra-ui/react-use-timeout/dist/index.mjs
 // src/index.ts
 
 
 function useTimeout(callback, delay) {
-  const fn = useCallbackRef(callback);
+  const fn = (0,react_use_callback_ref_dist/* useCallbackRef */.W)(callback);
   (0,index_js_.useEffect)(() => {
     if (delay == null)
       return void 0;
@@ -13686,29 +13669,8 @@ function useTimeout(callback, delay) {
 }
 
 
-;// CONCATENATED MODULE: ./node_modules/@chakra-ui/react-use-update-effect/dist/index.mjs
-// src/index.ts
-
-function useUpdateEffect(callback, deps) {
-  const renderCycleRef = (0,index_js_.useRef)(false);
-  const effectCycleRef = (0,index_js_.useRef)(false);
-  (0,index_js_.useEffect)(() => {
-    const mounted = renderCycleRef.current;
-    const run = mounted && effectCycleRef.current;
-    if (run) {
-      return callback();
-    }
-    effectCycleRef.current = true;
-  }, deps);
-  (0,index_js_.useEffect)(() => {
-    renderCycleRef.current = true;
-    return () => {
-      renderCycleRef.current = false;
-    };
-  }, []);
-}
-
-
+// EXTERNAL MODULE: ./node_modules/@chakra-ui/react-use-update-effect/dist/index.mjs
+var react_use_update_effect_dist = __webpack_require__(2366);
 ;// CONCATENATED MODULE: ./node_modules/framer-motion/dist/es/context/PresenceContext.mjs
 
 
@@ -23803,8 +23765,8 @@ function createDomMotionComponent(key) {
 
 
 
-// EXTERNAL MODULE: ./node_modules/@chakra-ui/system/dist/chunk-3LE6AY5Q.mjs + 6 modules
-var chunk_3LE6AY5Q = __webpack_require__(7785);
+// EXTERNAL MODULE: ./node_modules/@chakra-ui/system/dist/chunk-3LE6AY5Q.mjs + 5 modules
+var chunk_3LE6AY5Q = __webpack_require__(4613);
 ;// CONCATENATED MODULE: ./node_modules/@chakra-ui/toast/dist/chunk-GQXYYJJJ.mjs
 
 
@@ -23862,12 +23824,12 @@ var ToastComponent = (0,index_js_.memo)((props) => {
   } = props;
   const [delay, setDelay] = (0,index_js_.useState)(duration);
   const isPresent = useIsPresent();
-  useUpdateEffect(() => {
+  (0,react_use_update_effect_dist/* useUpdateEffect */.r)(() => {
     if (!isPresent) {
       onCloseComplete == null ? void 0 : onCloseComplete();
     }
   }, [isPresent]);
-  useUpdateEffect(() => {
+  (0,react_use_update_effect_dist/* useUpdateEffect */.r)(() => {
     setDelay(duration);
   }, [duration]);
   const onMouseEnter = () => setDelay(null);
@@ -23923,84 +23885,14 @@ ToastComponent.displayName = "ToastComponent";
 
 
 
-// EXTERNAL MODULE: ./node_modules/@chakra-ui/system/dist/chunk-QEVFQ4EU.mjs
-var chunk_QEVFQ4EU = __webpack_require__(5059);
-// EXTERNAL MODULE: ./node_modules/@chakra-ui/system/dist/chunk-T2VHL7RE.mjs + 2 modules
-var chunk_T2VHL7RE = __webpack_require__(5490);
-;// CONCATENATED MODULE: ./node_modules/@chakra-ui/icon/dist/chunk-DKFDJSXF.mjs
-// src/icon.tsx
-
-
-
-var fallbackIcon = {
-  path: /* @__PURE__ */ (0,jsx_runtime.jsxs)("g", { stroke: "currentColor", strokeWidth: "1.5", children: [
-    /* @__PURE__ */ (0,jsx_runtime.jsx)(
-      "path",
-      {
-        strokeLinecap: "round",
-        fill: "none",
-        d: "M9,9a3,3,0,1,1,4,2.829,1.5,1.5,0,0,0-1,1.415V14.25"
-      }
-    ),
-    /* @__PURE__ */ (0,jsx_runtime.jsx)(
-      "path",
-      {
-        fill: "currentColor",
-        strokeLinecap: "round",
-        d: "M12,17.25a.375.375,0,1,0,.375.375A.375.375,0,0,0,12,17.25h0"
-      }
-    ),
-    /* @__PURE__ */ (0,jsx_runtime.jsx)("circle", { fill: "none", strokeMiterlimit: "10", cx: "12", cy: "12", r: "11.25" })
-  ] }),
-  viewBox: "0 0 24 24"
-};
-var Icon = (0,chunk_QEVFQ4EU/* forwardRef */.G)((props, ref) => {
-  const {
-    as: element,
-    viewBox,
-    color = "currentColor",
-    focusable = false,
-    children,
-    className,
-    __css,
-    ...rest
-  } = props;
-  const _className = (0,shared_utils_dist.cx)("chakra-icon", className);
-  const customStyles = (0,chunk_T2VHL7RE/* useStyleConfig */.mq)("Icon", props);
-  const styles = {
-    w: "1em",
-    h: "1em",
-    display: "inline-block",
-    lineHeight: "1em",
-    flexShrink: 0,
-    color,
-    ...__css,
-    ...customStyles
-  };
-  const shared = {
-    ref,
-    focusable,
-    className: _className,
-    __css: styles
-  };
-  const _viewBox = viewBox != null ? viewBox : fallbackIcon.viewBox;
-  if (element && typeof element !== "string") {
-    return /* @__PURE__ */ (0,jsx_runtime.jsx)(chunk_3LE6AY5Q/* chakra.svg */.m.svg, { as: element, ...shared, ...rest });
-  }
-  const _path = children != null ? children : fallbackIcon.path;
-  return /* @__PURE__ */ (0,jsx_runtime.jsx)(chunk_3LE6AY5Q/* chakra.svg */.m.svg, { verticalAlign: "middle", viewBox: _viewBox, ...shared, ...rest, children: _path });
-});
-Icon.displayName = "Icon";
-var icon_default = (/* unused pure expression or super */ null && (Icon));
-
-
-
+// EXTERNAL MODULE: ./node_modules/@chakra-ui/icon/dist/chunk-DKFDJSXF.mjs
+var chunk_DKFDJSXF = __webpack_require__(6877);
 ;// CONCATENATED MODULE: ./node_modules/@chakra-ui/alert/dist/chunk-R7JICMEA.mjs
 // src/icons.tsx
 
 
 function CheckIcon(props) {
-  return /* @__PURE__ */ (0,jsx_runtime.jsx)(Icon, { viewBox: "0 0 24 24", ...props, children: /* @__PURE__ */ (0,jsx_runtime.jsx)(
+  return /* @__PURE__ */ (0,jsx_runtime.jsx)(chunk_DKFDJSXF/* Icon */.J, { viewBox: "0 0 24 24", ...props, children: /* @__PURE__ */ (0,jsx_runtime.jsx)(
     "path",
     {
       fill: "currentColor",
@@ -24009,7 +23901,7 @@ function CheckIcon(props) {
   ) });
 }
 function InfoIcon(props) {
-  return /* @__PURE__ */ (0,jsx_runtime.jsx)(Icon, { viewBox: "0 0 24 24", ...props, children: /* @__PURE__ */ (0,jsx_runtime.jsx)(
+  return /* @__PURE__ */ (0,jsx_runtime.jsx)(chunk_DKFDJSXF/* Icon */.J, { viewBox: "0 0 24 24", ...props, children: /* @__PURE__ */ (0,jsx_runtime.jsx)(
     "path",
     {
       fill: "currentColor",
@@ -24018,7 +23910,7 @@ function InfoIcon(props) {
   ) });
 }
 function WarningIcon(props) {
-  return /* @__PURE__ */ (0,jsx_runtime.jsx)(Icon, { viewBox: "0 0 24 24", ...props, children: /* @__PURE__ */ (0,jsx_runtime.jsx)(
+  return /* @__PURE__ */ (0,jsx_runtime.jsx)(chunk_DKFDJSXF/* Icon */.J, { viewBox: "0 0 24 24", ...props, children: /* @__PURE__ */ (0,jsx_runtime.jsx)(
     "path",
     {
       fill: "currentColor",
@@ -24063,6 +23955,10 @@ function getStatusIcon(status) {
 
 
 
+// EXTERNAL MODULE: ./node_modules/@chakra-ui/system/dist/chunk-QEVFQ4EU.mjs
+var chunk_QEVFQ4EU = __webpack_require__(5059);
+// EXTERNAL MODULE: ./node_modules/@chakra-ui/system/dist/chunk-T2VHL7RE.mjs + 2 modules
+var chunk_T2VHL7RE = __webpack_require__(5490);
 ;// CONCATENATED MODULE: ./node_modules/@chakra-ui/alert/dist/chunk-RWQIUCJP.mjs
 
 
@@ -24191,7 +24087,7 @@ AlertDescription.displayName = "AlertDescription";
 
 
 function CloseIcon(props) {
-  return /* @__PURE__ */ (0,jsx_runtime.jsx)(Icon, { focusable: "false", "aria-hidden": true, ...props, children: /* @__PURE__ */ (0,jsx_runtime.jsx)(
+  return /* @__PURE__ */ (0,jsx_runtime.jsx)(chunk_DKFDJSXF/* Icon */.J, { focusable: "false", "aria-hidden": true, ...props, children: /* @__PURE__ */ (0,jsx_runtime.jsx)(
     "path",
     {
       fill: "currentColor",
@@ -24850,7 +24746,7 @@ var DefaultPortal = (props) => {
   (0,index_js_.useEffect)(() => forceUpdate({}), []);
   const parentPortal = usePortalContext();
   const manager = usePortalManager();
-  dist_useSafeLayoutEffect(() => {
+  (0,react_use_safe_layout_effect_dist/* useSafeLayoutEffect */.G)(() => {
     if (!tempNode)
       return;
     const doc = tempNode.ownerDocument;
@@ -24893,8 +24789,8 @@ var ContainerPortal = (props) => {
     return node;
   }, [containerEl]);
   const [, forceUpdate] = (0,index_js_.useState)({});
-  dist_useSafeLayoutEffect(() => forceUpdate({}), []);
-  dist_useSafeLayoutEffect(() => {
+  (0,react_use_safe_layout_effect_dist/* useSafeLayoutEffect */.G)(() => forceUpdate({}), []);
+  (0,react_use_safe_layout_effect_dist/* useSafeLayoutEffect */.G)(() => {
     if (!portal || !host)
       return;
     host.appendChild(portal);
@@ -31373,9 +31269,9 @@ function _extends() {
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "If": () => (/* binding */ useColorMode),
+/* harmony export */   "ff": () => (/* binding */ useColorModeValue),
 /* harmony export */   "kc": () => (/* binding */ ColorModeContext)
 /* harmony export */ });
-/* unused harmony export useColorModeValue */
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2107);
 // src/color-mode-context.ts
 
@@ -31393,6 +31289,159 @@ function useColorModeValue(light, dark) {
   return colorMode === "dark" ? dark : light;
 }
 
+
+
+
+/***/ }),
+
+/***/ 6877:
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "J": () => (/* binding */ Icon)
+/* harmony export */ });
+/* unused harmony export icon_default */
+/* harmony import */ var _chakra_ui_system__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5059);
+/* harmony import */ var _chakra_ui_system__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5490);
+/* harmony import */ var _chakra_ui_system__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4613);
+/* harmony import */ var _chakra_ui_shared_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5432);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+// src/icon.tsx
+
+
+
+var fallbackIcon = {
+  path: /* @__PURE__ */ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("g", { stroke: "currentColor", strokeWidth: "1.5", children: [
+    /* @__PURE__ */ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(
+      "path",
+      {
+        strokeLinecap: "round",
+        fill: "none",
+        d: "M9,9a3,3,0,1,1,4,2.829,1.5,1.5,0,0,0-1,1.415V14.25"
+      }
+    ),
+    /* @__PURE__ */ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(
+      "path",
+      {
+        fill: "currentColor",
+        strokeLinecap: "round",
+        d: "M12,17.25a.375.375,0,1,0,.375.375A.375.375,0,0,0,12,17.25h0"
+      }
+    ),
+    /* @__PURE__ */ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("circle", { fill: "none", strokeMiterlimit: "10", cx: "12", cy: "12", r: "11.25" })
+  ] }),
+  viewBox: "0 0 24 24"
+};
+var Icon = (0,_chakra_ui_system__WEBPACK_IMPORTED_MODULE_1__/* .forwardRef */ .G)((props, ref) => {
+  const {
+    as: element,
+    viewBox,
+    color = "currentColor",
+    focusable = false,
+    children,
+    className,
+    __css,
+    ...rest
+  } = props;
+  const _className = (0,_chakra_ui_shared_utils__WEBPACK_IMPORTED_MODULE_2__.cx)("chakra-icon", className);
+  const customStyles = (0,_chakra_ui_system__WEBPACK_IMPORTED_MODULE_3__/* .useStyleConfig */ .mq)("Icon", props);
+  const styles = {
+    w: "1em",
+    h: "1em",
+    display: "inline-block",
+    lineHeight: "1em",
+    flexShrink: 0,
+    color,
+    ...__css,
+    ...customStyles
+  };
+  const shared = {
+    ref,
+    focusable,
+    className: _className,
+    __css: styles
+  };
+  const _viewBox = viewBox != null ? viewBox : fallbackIcon.viewBox;
+  if (element && typeof element !== "string") {
+    return /* @__PURE__ */ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_chakra_ui_system__WEBPACK_IMPORTED_MODULE_4__/* .chakra.svg */ .m.svg, { as: element, ...shared, ...rest });
+  }
+  const _path = children != null ? children : fallbackIcon.path;
+  return /* @__PURE__ */ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_chakra_ui_system__WEBPACK_IMPORTED_MODULE_4__/* .chakra.svg */ .m.svg, { verticalAlign: "middle", viewBox: _viewBox, ...shared, ...rest, children: _path });
+});
+Icon.displayName = "Icon";
+var icon_default = (/* unused pure expression or super */ null && (Icon));
+
+
+
+
+/***/ }),
+
+/***/ 888:
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "V8": () => (/* binding */ assignAfter),
+/* harmony export */   "oA": () => (/* binding */ compact)
+/* harmony export */ });
+/* unused harmony exports omit, pick, split */
+// src/index.ts
+function compact(object) {
+  const clone = Object.assign({}, object);
+  for (let key in clone) {
+    if (clone[key] === void 0)
+      delete clone[key];
+  }
+  return clone;
+}
+function omit(object, keysToOmit = []) {
+  const clone = Object.assign({}, object);
+  for (const key of keysToOmit) {
+    if (key in clone) {
+      delete clone[key];
+    }
+  }
+  return clone;
+}
+function pick(object, keysToPick) {
+  const result = {};
+  for (const key of keysToPick) {
+    if (key in object) {
+      result[key] = object[key];
+    }
+  }
+  return result;
+}
+function split(object, keys) {
+  const picked = {};
+  const omitted = {};
+  for (const [key, value] of Object.entries(object)) {
+    if (keys.includes(key))
+      picked[key] = value;
+    else
+      omitted[key] = value;
+  }
+  return [picked, omitted];
+}
+function assignAfter(target, ...sources) {
+  if (target == null) {
+    throw new TypeError("Cannot convert undefined or null to object");
+  }
+  const result = { ...target };
+  for (const nextSource of sources) {
+    if (nextSource == null)
+      continue;
+    for (const nextKey in nextSource) {
+      if (!Object.prototype.hasOwnProperty.call(nextSource, nextKey))
+        continue;
+      if (nextKey in result)
+        delete result[nextKey];
+      result[nextKey] = nextSource[nextKey];
+    }
+  }
+  return result;
+}
 
 
 
@@ -31442,6 +31491,80 @@ function createContext(options = {}) {
 
 /***/ }),
 
+/***/ 5155:
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "W": () => (/* binding */ useCallbackRef)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2107);
+// src/index.ts
+
+function useCallbackRef(callback, deps = []) {
+  const callbackRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(callback);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    callbackRef.current = callback;
+  });
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)((...args) => {
+    var _a;
+    return (_a = callbackRef.current) == null ? void 0 : _a.call(callbackRef, ...args);
+  }, deps);
+}
+
+
+
+/***/ }),
+
+/***/ 6245:
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "G": () => (/* binding */ useSafeLayoutEffect)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2107);
+// src/index.ts
+
+var useSafeLayoutEffect = Boolean(globalThis == null ? void 0 : globalThis.document) ? react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect : react__WEBPACK_IMPORTED_MODULE_0__.useEffect;
+
+
+
+/***/ }),
+
+/***/ 2366:
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "r": () => (/* binding */ useUpdateEffect)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2107);
+// src/index.ts
+
+function useUpdateEffect(callback, deps) {
+  const renderCycleRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(false);
+  const effectCycleRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(false);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    const mounted = renderCycleRef.current;
+    const run = mounted && effectCycleRef.current;
+    if (run) {
+      return callback();
+    }
+    effectCycleRef.current = true;
+  }, deps);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    renderCycleRef.current = true;
+    return () => {
+      renderCycleRef.current = false;
+    };
+  }, []);
+}
+
+
+
+/***/ }),
+
 /***/ 5432:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
@@ -31449,10 +31572,13 @@ function createContext(options = {}) {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Kn": () => (/* binding */ isObject),
 /* harmony export */   "PB": () => (/* binding */ dataAttr),
+/* harmony export */   "PP": () => (/* binding */ callAll),
 /* harmony export */   "Pu": () => (/* binding */ runIfFn),
-/* harmony export */   "cx": () => (/* binding */ cx)
+/* harmony export */   "Qm": () => (/* binding */ ariaAttr),
+/* harmony export */   "cx": () => (/* binding */ cx),
+/* harmony export */   "v0": () => (/* binding */ callAllHandlers)
 /* harmony export */ });
-/* unused harmony exports ariaAttr, callAll, callAllHandlers, warn */
+/* unused harmony export warn */
 // src/index.ts
 var cx = (...classNames) => classNames.filter(Boolean).join(" ");
 function isDev() {
@@ -31505,7 +31631,7 @@ function callAll(...fns) {
 /* harmony import */ var _chakra_ui_system__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5059);
 /* harmony import */ var _chakra_ui_system__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5490);
 /* harmony import */ var _chakra_ui_system__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3179);
-/* harmony import */ var _chakra_ui_system__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7785);
+/* harmony import */ var _chakra_ui_system__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(4613);
 /* harmony import */ var _chakra_ui_shared_utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(5432);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
 // src/spinner.tsx
@@ -33278,7 +33404,7 @@ function omitThemingProps(props) {
 
 /***/ }),
 
-/***/ 7785:
+/***/ 4613:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -33324,65 +33450,8 @@ var chunk_7NLW6UB6 = __webpack_require__(2498);
 var chunk_YTQ3XZ3T = __webpack_require__(1759);
 // EXTERNAL MODULE: ./node_modules/@chakra-ui/utils/dist/chunk-M3TFMUOL.mjs + 1 modules
 var chunk_M3TFMUOL = __webpack_require__(696);
-;// CONCATENATED MODULE: ./node_modules/@chakra-ui/object-utils/dist/index.mjs
-// src/index.ts
-function compact(object) {
-  const clone = Object.assign({}, object);
-  for (let key in clone) {
-    if (clone[key] === void 0)
-      delete clone[key];
-  }
-  return clone;
-}
-function omit(object, keysToOmit = []) {
-  const clone = Object.assign({}, object);
-  for (const key of keysToOmit) {
-    if (key in clone) {
-      delete clone[key];
-    }
-  }
-  return clone;
-}
-function pick(object, keysToPick) {
-  const result = {};
-  for (const key of keysToPick) {
-    if (key in object) {
-      result[key] = object[key];
-    }
-  }
-  return result;
-}
-function split(object, keys) {
-  const picked = {};
-  const omitted = {};
-  for (const [key, value] of Object.entries(object)) {
-    if (keys.includes(key))
-      picked[key] = value;
-    else
-      omitted[key] = value;
-  }
-  return [picked, omitted];
-}
-function assignAfter(target, ...sources) {
-  if (target == null) {
-    throw new TypeError("Cannot convert undefined or null to object");
-  }
-  const result = { ...target };
-  for (const nextSource of sources) {
-    if (nextSource == null)
-      continue;
-    for (const nextKey in nextSource) {
-      if (!Object.prototype.hasOwnProperty.call(nextSource, nextKey))
-        continue;
-      if (nextKey in result)
-        delete result[nextKey];
-      result[nextKey] = nextSource[nextKey];
-    }
-  }
-  return result;
-}
-
-
+// EXTERNAL MODULE: ./node_modules/@chakra-ui/object-utils/dist/index.mjs
+var object_utils_dist = __webpack_require__(888);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/extends.js
 var helpers_extends = __webpack_require__(434);
 // EXTERNAL MODULE: external "/home/marula/Escritorio/ADA/gatsby-y-chakra/my-gatsby-site/node_modules/react/index.js"
@@ -33639,7 +33708,7 @@ var toCSSObject = ({ baseStyle }) => (props) => {
   const { theme, css: cssProp, __css, sx, ...rest } = props;
   const styleProps = (0,chunk_YTQ3XZ3T/* objectFilter */.lw)(rest, (_, prop) => (0,dist/* isStyleProp */.ZR)(prop));
   const finalBaseStyle = (0,chunk_M3TFMUOL/* runIfFn */.Pu)(baseStyle, props);
-  const finalStyles = assignAfter(
+  const finalStyles = (0,object_utils_dist/* assignAfter */.V8)(
     {},
     __css,
     finalBaseStyle,
